@@ -28,6 +28,7 @@ return {
         }
       end,
       formatters_by_ft = {
+	java = { 'google_java_format' },
         rust = { 'rustfmt' },
         lua = { 'stylua' },
         bash = { 'shfmt' },

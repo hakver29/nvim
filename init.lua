@@ -283,18 +283,16 @@ require('lazy').setup({
       },
     },
   },
-
-  {
-    'mfussenegger/nvim-jdtls',
-    ft = 'java',
-    config = function()
-      require('jdtls').start_or_attach {
-        cmd = { 'jdtls' },
-        root_dir = vim.fs.dirname(vim.fs.find({ 'gradlew', '.git', 'mvnw' }, { upward = true })[1]),
-      }
-    end,
-  },
-
+  -- {
+  --  'mfussenegger/nvim-jdtls',
+  --  ft = 'java',
+  --  config = function()
+  --    require('jdtls').start_or_attach {
+  --      cmd = { 'jdtls' },
+  --      root_dir = vim.fs.dirname(vim.fs.find({ 'gradlew', '.git', 'mvnw' }, { upward = true })[1]),
+  --    }
+  --  end,
+  ----},
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
   --
   -- This is often very useful to both group configuration, as well as handle
