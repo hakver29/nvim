@@ -1,6 +1,6 @@
-vim.opt_local.tabstop = 2         -- Number of spaces a <Tab> counts for
-vim.opt_local.shiftwidth = 2      -- Number of spaces to use for each step of (auto)indent
-vim.opt_local.softtabstop = 2     -- Number of spaces a <Tab> inserts (when expandtab is on)
+vim.opt_local.tabstop = 4         -- Number of spaces a <Tab> counts for
+vim.opt_local.shiftwidth = 4      -- Number of spaces to use for each step of (auto)indent
+vim.opt_local.softtabstop = 4     -- Number of spaces a <Tab> inserts (when expandtab is on)
 vim.opt_local.expandtab = true    -- Use spaces instead of tabs
 vim.opt_local.autoindent = true   -- Copy indent from current line when starting a new line
 vim.opt_local.smartindent = true  -- Smarter autoindenting for C-like languages
@@ -13,6 +13,9 @@ vim.opt_local.colorcolumn = "121" -- Highlight column after textwidth for visual
 -- Set options for blank lines and control statements based on XML
 -- <option name="KEEP_BLANK_LINES_IN_CODE" value="1" />
 vim.opt_local.formatexpr = "v:lua.vim.lsp.buf.format({ async = true })" -- Use LSP for 'gq' formatting
+
+-- Disable automatic newline at the end of the file for this buffer
+vim.opt_local.endofline = false
 
 -- Define buffer-local keymaps for common LSP actions.
 -- These keymaps will only be active when you are in a Java file.
